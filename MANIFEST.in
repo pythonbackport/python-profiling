@@ -1,0 +1,15 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include setup.py
+include _remote_debugging/remote_debug.h
+include _remote_debugging/remote_debug_314.h
+include _remote_debugging/remote_debugging_314.c
+include _remote_debugging/clinic/_remote_debugging_module_314.c.h
+recursive-include _remote_debugging *.c *.h
+recursive-include profiling *.py *.css *.html *.js *.png
+recursive-include .github *.md *.yml *.yaml
+prune build
+prune dist
+prune profiling.egg-info
+global-exclude *.py[cod] __pycache__

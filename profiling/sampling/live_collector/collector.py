@@ -11,7 +11,7 @@ import site
 import sys
 import sysconfig
 import time
-lazy import _colorize
+import _colorize
 
 from ..collector import Collector, extract_lineno
 from ..constants import (
