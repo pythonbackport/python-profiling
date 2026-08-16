@@ -6,7 +6,12 @@ import contextlib
 import linecache
 import os
 import sys
-from traceback import _byte_offset_to_character_offset
+try:
+    from traceback import _byte_offset_to_character_offset
+except ImportError:
+    def _byte_offset_to_character_offset(str, offset):
+        as_utf8 = str.encode('utf-8')
+        return len(as_utf8[:offset].decode("utf-8", errors="replace"))
 
 import _colorize
 
