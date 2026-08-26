@@ -1,8 +1,31 @@
-from _typeshed import StrOrBytesPath, structseq
-from collections.abc import Callable
-from typing import Final, TypeAlias, final
-from typing_extensions import Self
+from collections.abc import Callable, Iterable
+from os import PathLike
+import sys
+from typing import Any, Final, Generic, TypeAlias, final, Self, TypeVar
 
+_T_co = TypeVar("_T_co", covariant=True)
+
+# from _typeshed
+# This is an internal CPython type that is like, but subtly different from, a NamedTuple
+# Subclasses of this type are found in multiple modules.
+# In typeshed, `structseq` is only ever used as a mixin in combination with a fixed-length `Tuple`
+# See discussion at #6546 & #6560
+# `structseq` classes are unsubclassable, so are all decorated with `@final`.
+class structseq(Generic[_T_co]):
+    n_fields: Final[int]
+    n_unnamed_fields: Final[int]
+    n_sequence_fields: Final[int]
+    # The first parameter will generally only take an iterable of a specific length.
+    # E.g. `os.uname_result` takes any iterable of length exactly 5.
+    #
+    # The second parameter will accept a dict of any kind without raising an exception,
+    # but only has any meaning if you supply it a dict where the keys are strings.
+    # https://github.com/python/typeshed/pull/6560#discussion_r767149830
+    def __new__(cls, sequence: Iterable[_T_co], dict: dict[str, Any] = ...) -> Self: ...
+    if sys.version_info >= (3, 13):
+        def __replace__(self, **kwargs: Any) -> Self: ...
+
+StrOrBytesPath: TypeAlias = str | bytes | PathLike[str] | PathLike[bytes]
 _Location: TypeAlias = tuple[int, int, int, int] | LocationInfo | None
 _Frame: TypeAlias = tuple[str, _Location, str, int | None] | FrameInfo
 _Stats: TypeAlias = dict[str, int | float]
