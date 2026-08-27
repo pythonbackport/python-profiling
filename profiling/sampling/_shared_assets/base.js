@@ -1,5 +1,3 @@
-// Backport from python 3.15's new library 'profiling'
-
 // Tachyon Profiler - Shared JavaScript
 // Common utilities shared between flamegraph and heatmap views
 

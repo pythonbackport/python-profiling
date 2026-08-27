@@ -1,5 +1,3 @@
-// Backport from python 3.15's new library 'profiling'
-
 const EMBEDDED_DATA = {{FLAMEGRAPH_DATA}};
 
 // Global string table for resolving string indices

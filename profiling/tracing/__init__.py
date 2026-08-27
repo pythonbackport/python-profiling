@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Tracing profiler for Python.
 
 This module provides deterministic profiling of Python programs by tracing

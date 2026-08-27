@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 from abc import ABC, abstractmethod
 from .constants import (
     DEFAULT_LOCATION,

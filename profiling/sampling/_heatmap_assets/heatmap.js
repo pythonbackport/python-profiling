@@ -1,5 +1,3 @@
-// Backport from python 3.15's new library 'profiling'
-
 // Tachyon Profiler - Heatmap JavaScript
 // Interactive features for the heatmap visualization
 // Aligned with Flamegraph viewer design patterns

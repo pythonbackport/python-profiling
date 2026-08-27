@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Thin Python wrapper around C binary writer for profiling data."""
 
 import time
@@ -88,6 +86,13 @@ class BinaryCollector(Collector):
     def collect_failed_sample(self):
         """Record a failed sample attempt (no-op for binary format)."""
         pass
+
+    def set_stats(self, sample_interval_usec, duration_sec, sample_rate,
+                  error_rate=None, missed_samples=None, **kwargs):
+        """Persist measured statistics for later replay."""
+        self._writer.set_stats(
+            duration_sec, sample_rate, error_rate, missed_samples
+        )
 
     def export(self, filename=None):
         """Finalize and close the binary file.

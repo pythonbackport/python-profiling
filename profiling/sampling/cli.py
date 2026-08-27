@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Command-line interface for the sampling profiler."""
 
 import argparse
@@ -778,6 +776,8 @@ def _replay_with_reader(args, reader):
             )
 
     count = reader.replay_samples(collector, progress_callback)
+    if hasattr(collector, "set_replay_stats"):
+        collector.set_replay_stats(info)
     print()
 
     if args.format == "pstats":

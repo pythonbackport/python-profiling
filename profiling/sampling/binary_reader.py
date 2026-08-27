@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Thin Python wrapper around C binary reader for profiling data."""
 
 import _remote_debugging
@@ -127,6 +125,8 @@ def convert_binary_to_format(input_file, output_file, output_format,
 
         # Replay samples through collector
         count = reader.replay_samples(collector, progress_callback)
+        if hasattr(collector, "set_replay_stats"):
+            collector.set_replay_stats(info)
 
         # Export to target format
         collector.export(output_file)

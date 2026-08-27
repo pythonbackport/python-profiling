@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Statistical sampling profiler for Python.
 
 This module provides low-overhead profiling by periodically sampling the

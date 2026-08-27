@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Heatmap collector for Python profiling with line-level execution heat visualization."""
 
 import base64

@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Widget classes for the live profiling collector UI."""
 
 import curses

@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 import _remote_debugging
 import contextlib
 import os
@@ -8,7 +6,7 @@ import sys
 import sysconfig
 import time
 from collections import deque
-from _colorize import ANSIColors
+lazy from _colorize import ANSIColors
 
 from .binary_collector import BinaryCollector
 

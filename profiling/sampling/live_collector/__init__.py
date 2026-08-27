@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Live profiling collector that displays top-like statistics using curses.
 
                     ┌─────────────────────────────┐

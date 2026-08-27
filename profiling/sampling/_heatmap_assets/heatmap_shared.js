@@ -1,5 +1,3 @@
-// Backport from python 3.15's new library 'profiling'
-
 // Tachyon Profiler - Shared Heatmap JavaScript
 // Common utilities shared between index and file views
 

@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Constants for the live profiling collector."""
 
 # Time conversion constants

@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """
 Internal synchronization coordinator for the sample profiler.
 

@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 class _Utils:
     """Support class for utility functions which are shared by
     profile.py and cProfile.py modules.

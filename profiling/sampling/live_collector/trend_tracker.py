@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """TrendTracker - Encapsulated trend tracking for live profiling metrics.
 
 This module provides trend tracking functionality for profiling metrics,

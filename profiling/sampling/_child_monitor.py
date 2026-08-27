@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """
 Child process monitoring for the sampling profiler.
 

@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """String table implementation for memory-efficient string storage in profiling data."""
 
 class StringTable:

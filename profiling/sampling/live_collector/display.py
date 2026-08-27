@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Display interface abstractions for the live profiling collector."""
 
 import curses

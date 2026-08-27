@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """JSON Lines (JSONL) collector for the sampling profiler.
 
 Emits a normalized newline-delimited JSON record stream suitable for

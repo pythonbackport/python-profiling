@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Custom exceptions for the sampling profiler."""
 
 class SamplingProfilerError(Exception):

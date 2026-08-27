@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """LiveStatsCollector - Main collector class for live profiling."""
 
 import collections
@@ -11,7 +9,7 @@ import site
 import sys
 import sysconfig
 import time
-import _colorize
+lazy import _colorize
 
 from ..collector import Collector, extract_lineno
 from ..constants import (

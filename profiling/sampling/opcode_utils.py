@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Opcode utilities for bytecode-level profiler visualization.
 
 This module provides utilities to get opcode names and detect specialization

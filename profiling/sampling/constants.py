@@ -1,5 +1,3 @@
-# Backport from python 3.15's new library 'profiling'
-
 """Constants for the sampling profiler."""
 
 # Time unit conversion constants
