@@ -6,7 +6,7 @@ import sys
 import sysconfig
 import time
 from collections import deque
-lazy from _colorize import ANSIColors
+from _colorize import ANSIColors
 
 from .binary_collector import BinaryCollector
 
