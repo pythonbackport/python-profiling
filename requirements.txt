@@ -1,2 +1,2 @@
 windows-curses>=2.4.2
-python-lazyimports==0.1.5  # 3.15 support
+# python-lazyimports==0.1.5  # 3.15 support

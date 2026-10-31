@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "python-profiling"
-version = "0.1.0"
+version = "0.2.0"
 description = "Backport of Python 3.15's profiling package and Tachyon sampling profiler"
 readme = "README.md"
 requires-python = ">=3.14,<3.16"
